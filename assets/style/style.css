@@ -1,0 +1,195 @@
+/* =======================================GENERAL====================== */
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins-Regular";
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+}
+
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--white);
+}
+
+:root {
+  --main-title: 3rem;
+  --sub-title: 2rem;
+  --par: 1.3rem;
+  --small: 0.7rem;
+  --white: #fffff8;
+  --black: #28282b;
+
+  /*===
+  --white: 
+  --black:
+  ===*/
+  --margin: 2%;
+  --padding: 3%;
+}
+
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style-type: none;
+  color: inherit;
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../fonts/Poppins-Regular.woff") format("woff"),
+    url("../fonts/Poppins-Regular.woff2") format("woff2");
+}
+
+/* ========================================================================= */
+
+/* splash screen ================================== */
+main {
+  display: flex;
+  flex-direction: column;
+  background-image: url(../img/blurred-5.png);
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  scroll-snap-align: start;
+}
+
+main > article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  color: var(--black);
+  margin: auto;
+  padding: 8%;
+  text-align: center;
+  font-size: var(--sub-title);
+  box-shadow: 5px 5px 15px 10px black;
+}
+main > article > h1 {
+  letter-spacing: 0.5em;
+}
+main > article > a {
+  border-bottom: 3px solid var(--black);
+  color: var(--black);
+  padding: 10px;
+  border-radius: 100px;
+  width: fit-content;
+  margin: 5%;
+}
+
+main > article > a:active {
+  border-bottom: 1px solid var(--black);
+}
+/* second page=============================== */
+
+#composers {
+  height: 100vh;
+  scroll-snap-align: start;
+  position: absolute;
+}
+
+/* Menu expandable=========================== */
+
+.container {
+  width: 100%;
+}
+
+#menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: red;
+  height: 2em;
+  top: 20px;
+  position: fixed;
+  z-index: 999;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.2%;
+  border-radius: 5px;
+  width: 3%;
+  transition: 1s;
+  aspect-ratio: 20/8;
+  /* ========== on hover ================= */
+  width: 10%;
+  transition: 1s;
+  padding: 1%;
+}
+
+#menu > ul {
+  display: flex;
+  width: 100%;
+
+  align-items: center;
+}
+
+#menu > ul > li {
+  justify-self: space-evenly;
+}
+
+#menu > p {
+  display: none;
+}
+/* #menu:hover {
+  animation: menu 1s forwards;
+  transition: 1s;
+}
+
+#menu:hover p {
+  display: none;
+}
+@keyframes menu {
+  from {
+    text-align: center;
+    background-color: red;
+    top: 20px;
+    position: fixed;
+    z-index: 999;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.2%;
+    border-radius: 5px;
+    width: 3%;
+    transition: 1s;
+  }
+
+  to {
+    background-color: green;
+    cursor: pointer;
+    width: 10%;
+    transition: 1s;
+    padding: 1%;
+  }
+} */
