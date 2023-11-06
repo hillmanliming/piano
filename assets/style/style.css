@@ -47,6 +47,7 @@ body {
   --small: 0.7rem;
   --white: #fffff8;
   --black: #28282b;
+  --unfocus: #9b9b9b;
 
   /*===
   --white: 
@@ -128,9 +129,9 @@ main > article > a:active {
 
 #menu {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  background-color: red;
+  background-color: var(--white);
   height: 2em;
   top: 20px;
   position: fixed;
@@ -140,56 +141,36 @@ main > article > a:active {
   padding: 0.2%;
   border-radius: 5px;
   width: 3%;
-  transition: 1s;
+  transition: 0.5s ease;
   aspect-ratio: 20/8;
+  border: 1px solid var(--black);
   /* ========== on hover ================= */
+}
+
+.in-menu {
+  display: none;
+}
+
+#menu:hover {
+  transition: 0.5s ease;
   width: 10%;
-  transition: 1s;
   padding: 1%;
 }
 
-#menu > ul {
+#menu:hover .out-menu {
+  display: none;
+}
+
+#menu:hover .in-menu {
   display: flex;
-  width: 100%;
-
-  align-items: center;
 }
 
-#menu > ul > li {
-  justify-self: space-evenly;
+svg:hover {
+  fill: var(--black);
+  transition: 0.25s ease;
 }
 
-#menu > p {
-  display: none;
+svg {
+  fill: var(--unfocus);
+  transition: 0.5s ease;
 }
-/* #menu:hover {
-  animation: menu 1s forwards;
-  transition: 1s;
-}
-
-#menu:hover p {
-  display: none;
-}
-@keyframes menu {
-  from {
-    text-align: center;
-    background-color: red;
-    top: 20px;
-    position: fixed;
-    z-index: 999;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0.2%;
-    border-radius: 5px;
-    width: 3%;
-    transition: 1s;
-  }
-
-  to {
-    background-color: green;
-    cursor: pointer;
-    width: 10%;
-    transition: 1s;
-    padding: 1%;
-  }
-} */
