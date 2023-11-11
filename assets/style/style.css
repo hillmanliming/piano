@@ -12,7 +12,12 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
+}
+
+body {
+  background-color: transparent;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 img,
 picture,
@@ -32,12 +37,6 @@ select {
 .resize-animation-stopper * {
   animation: none !important;
   transition: none !important;
-}
-
-body {
-  min-height: 100vh;
-  overflow-x: hidden;
-  background-color: var(--white);
 }
 
 :root {
@@ -74,15 +73,85 @@ a {
 /* ========================================================================= */
 
 /* splash screen ================================== */
+
+/* Menu expandable=========================== */
+
+#menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--white);
+  top: 20px;
+  position: fixed;
+  z-index: 999;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.4%;
+  border-radius: 100px;
+  width: clamp(50px, 3%, 100px);
+  transition: 0.5s ease;
+  border: 2px solid black;
+}
+
+.in-menu {
+  display: none;
+}
+
+#menu:hover {
+  transition: 0.5s ease;
+  width: clamp(200px, 10%, 400px);
+}
+
+#menu:hover .out-menu {
+  display: none;
+}
+
+#menu:hover .in-menu {
+  display: flex;
+}
+
+svg:hover {
+  fill: var(--black);
+  transition: 0.25s ease;
+}
+
+svg {
+  fill: var(--unfocus);
+  transition: 0.5s ease;
+}
+
+/* Parralax======================================== */
+.wrapper {
+  min-height: 100vh;
+  overflow: y auto;
+  overflow-x: hidden;
+  perspective: 10px;
+  scroll-behavior: smooth;
+}
 main {
+  position: relative;
   display: flex;
   flex-direction: column;
-  background-image: url(../img/blurred-5.png);
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background-position: center;
+  object-position: center;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  scroll-snap-align: start;
+  z-index: -1;
+  transform-style: preserve-3d;
+  transform: translateZ(-10px) scale(2);
 }
 
 main > article {
@@ -90,11 +159,11 @@ main > article {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   background-color: var(--white);
   color: var(--black);
-  margin: auto;
-  padding: 8%;
-  text-align: center;
+  padding: 10%;
+  margin: 5%;
   font-size: var(--sub-title);
   box-shadow: 5px 5px 15px 10px black;
 }
@@ -117,60 +186,6 @@ main > article > a:active {
 
 #composers {
   height: 100vh;
-  scroll-snap-align: start;
   position: absolute;
-}
-
-/* Menu expandable=========================== */
-
-.container {
-  width: 100%;
-}
-
-#menu {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   background-color: var(--white);
-  height: 2em;
-  top: 20px;
-  position: fixed;
-  z-index: 999;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 0.2%;
-  border-radius: 5px;
-  width: 3%;
-  transition: 0.5s ease;
-  aspect-ratio: 20/8;
-  border: 1px solid var(--black);
-  /* ========== on hover ================= */
-}
-
-.in-menu {
-  display: none;
-}
-
-#menu:hover {
-  transition: 0.5s ease;
-  width: 10%;
-  padding: 1%;
-}
-
-#menu:hover .out-menu {
-  display: none;
-}
-
-#menu:hover .in-menu {
-  display: flex;
-}
-
-svg:hover {
-  fill: var(--black);
-  transition: 0.25s ease;
-}
-
-svg {
-  fill: var(--unfocus);
-  transition: 0.5s ease;
 }
