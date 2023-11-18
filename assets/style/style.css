@@ -123,7 +123,6 @@ svg {
 /* main========================================================= */
 
 main {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -132,15 +131,11 @@ main {
   background-image: url(/assets/img/blurred-5.png);
   background-position: center;
   object-fit: cover;
-  object-position: center;
-  background-repeat: no-repeat;
 }
 
 main > article {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
   text-align: center;
   background-color: var(--white);
   color: var(--black);
@@ -149,17 +144,20 @@ main > article {
   font-size: var(--sub-title);
   box-shadow: 5px 5px 15px 10px black;
   transform: scale(0);
-  animation: resize .5s .5s ease forwards
+  animation: resize 0.5s ease forwards;
 }
-main > article > h1 {
+main > article > div > h1 {
   letter-spacing: 0.5em;
+  text-align: center;
+}
+
+div {
+  text-align: center;
 }
 main > article > a {
-  border-bottom: 3px solid var(--black);
+  border: 3px solid var(--black);
   color: var(--black);
-  padding: 10px;
-  border-radius: 100px;
-  width: fit-content;
+  padding: 2%;
   margin: 5%;
 }
 
@@ -168,7 +166,7 @@ main > article > a:active {
 }
 
 @keyframes resize {
-  to{
+  to {
     transform: scale(1);
   }
 }
