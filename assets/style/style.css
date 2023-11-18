@@ -120,14 +120,8 @@ svg {
   transition: 0.5s ease;
 }
 
-/* Parralax======================================== */
-.wrapper {
-  min-height: 100vh;
-  overflow: y auto;
-  overflow-x: hidden;
-  perspective: 10px;
-  scroll-behavior: smooth;
-}
+/* main========================================================= */
+
 main {
   position: relative;
   display: flex;
@@ -135,23 +129,11 @@ main {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100vw;
-  transform-style: preserve-3d;
-  z-index: -1;
-}
-
-.background {
-  position: absolute;
-  height: 100%;
-  width: 100%;
+  background-image: url(/assets/img/blurred-5.png);
+  background-position: center;
   object-fit: cover;
-  background-position: center;
   object-position: center;
-  background-position: center;
   background-repeat: no-repeat;
-  z-index: -1;
-  transform-style: preserve-3d;
-  transform: translateZ(-10px) scale(2);
 }
 
 main > article {
@@ -166,6 +148,8 @@ main > article {
   margin: 5%;
   font-size: var(--sub-title);
   box-shadow: 5px 5px 15px 10px black;
+  transform: scale(0);
+  animation: resize .5s .5s ease forwards
 }
 main > article > h1 {
   letter-spacing: 0.5em;
@@ -182,6 +166,13 @@ main > article > a {
 main > article > a:active {
   border-bottom: 1px solid var(--black);
 }
+
+@keyframes resize {
+  to{
+    transform: scale(1);
+  }
+}
+
 /* second page=============================== */
 
 #composers {
