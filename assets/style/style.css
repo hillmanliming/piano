@@ -12,13 +12,15 @@
 
 html {
   scroll-behavior: smooth;
+
 }
 
 body {
-  background-color: transparent;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  background-color: var(--white);
 }
+
 img,
 picture,
 svg,
@@ -42,7 +44,7 @@ select {
 :root {
   --main-title: 3rem;
   --sub-title: 2rem;
-  --par: 1.3rem;
+  --par: 1.125rem;
   --small: 0.7rem;
   --white: #fffff8;
   --black: #28282b;
@@ -76,21 +78,29 @@ a {
 
 /* Menu expandable=========================== */
 
+header {
+  position: fixed;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 1%;
+}
+
 #menu {
+
+  border: 3px solid var(--black);
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: var(--white);
-  top: 20px;
-  position: fixed;
-  z-index: 999;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 0.4%;
+  padding: 0.3%;
   border-radius: 100px;
   width: clamp(50px, 3%, 100px);
   transition: 0.5s ease;
-  border: 2px solid black;
 }
 
 .in-menu {
@@ -100,6 +110,7 @@ a {
 #menu:hover {
   transition: 0.5s ease;
   width: clamp(200px, 10%, 400px);
+
 }
 
 #menu:hover .out-menu {
@@ -120,6 +131,10 @@ svg {
   transition: 0.5s ease;
 }
 
+#menu-svg {
+  fill: var(--black);
+}
+
 /* main========================================================= */
 
 main {
@@ -133,7 +148,7 @@ main {
   object-fit: cover;
 }
 
-main > article {
+main>article {
   display: grid;
   place-items: center;
   text-align: center;
@@ -146,7 +161,8 @@ main > article {
   transform: scale(0);
   animation: resize 0.5s ease forwards;
 }
-main > article > div > h1 {
+
+main>article>div>h1 {
   letter-spacing: 0.5em;
   text-align: center;
 }
@@ -154,14 +170,15 @@ main > article > div > h1 {
 div {
   text-align: center;
 }
-main > article > a {
+
+main>article>a {
   border: 3px solid var(--black);
   color: var(--black);
   padding: 2%;
   margin: 5%;
 }
 
-main > article > a:active {
+main>article>a:active {
   border-bottom: 1px solid var(--black);
 }
 
@@ -174,7 +191,25 @@ main > article > a:active {
 /* second page=============================== */
 
 #composers {
-  height: 100vh;
-  position: absolute;
-  background-color: var(--white);
+  display: grid;
+  justify-content: center;
+  padding: 6rem;
+  height: 74vh
+}
+
+#composers>article {
+  initial-letter: large;
+}
+
+#composers>article {
+  font-size: var(--par);
+  max-width: 85ch;
+}
+
+#composers>article:first-letter {
+  font-size: 7rem;
+  float: left;
+  line-height: .6;
+  /* from 1 */
+  margin-right: 0.05em;
 }
