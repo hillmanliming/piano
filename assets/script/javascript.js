@@ -6,3 +6,5 @@ window.addEventListener("resize", () => {
     document.body.classList.remove("resize-animation-stopper");
   }, 400);
 });
+
+alert("Hover over the menu to open!");
