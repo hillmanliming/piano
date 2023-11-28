@@ -12,7 +12,6 @@
 
 html {
   scroll-behavior: smooth;
-
 }
 
 body {
@@ -88,10 +87,10 @@ header {
   align-items: center;
   z-index: 999;
   padding: 1%;
+  background-color: black;
 }
 
 #menu {
-
   border: 3px solid var(--black);
   display: flex;
   justify-content: space-around;
@@ -110,7 +109,6 @@ header {
 #menu:hover {
   transition: 0.5s ease;
   width: clamp(200px, 10%, 400px);
-
 }
 
 #menu:hover .out-menu {
@@ -148,7 +146,7 @@ main {
   object-fit: cover;
 }
 
-main>article {
+main > article {
   display: grid;
   place-items: center;
   text-align: center;
@@ -159,10 +157,10 @@ main>article {
   font-size: var(--sub-title);
   box-shadow: 5px 5px 15px 10px black;
   transform: scale(0);
-  animation: resize 0.5s ease forwards;
+  animation: resize 0.5s ease forwards 1;
 }
 
-main>article>div>h1 {
+main > article > div > h1 {
   letter-spacing: 0.5em;
   text-align: center;
 }
@@ -171,15 +169,15 @@ div {
   text-align: center;
 }
 
-main>article>a {
+main > article > a {
   border: 3px solid var(--black);
   color: var(--black);
   padding: 2%;
   margin: 5%;
 }
 
-main>article>a:active {
-  border-bottom: 1px solid var(--black);
+main > article > a:active {
+  transform: scale(0.98);
 }
 
 @keyframes resize {
@@ -193,23 +191,29 @@ main>article>a:active {
 #composers {
   display: grid;
   justify-content: center;
-  padding: 6rem;
-  height: 74vh
+  align-items: center;
+  height: 100vh;
+  margin: 5%;
 }
 
-#composers>article {
+#composers > article {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5rem;
+}
+#composers > article > p {
   initial-letter: large;
 }
 
-#composers>article {
+#composers > article {
   font-size: var(--par);
   max-width: 85ch;
 }
 
-#composers>article:first-letter {
+#composers > article > p:first-letter {
   font-size: 7rem;
   float: left;
-  line-height: .6;
+  line-height: 0.6;
   /* from 1 */
   margin-right: 0.05em;
 }
