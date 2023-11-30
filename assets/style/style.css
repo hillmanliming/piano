@@ -176,10 +176,16 @@ main > article > a {
   color: var(--black);
   padding: 2%;
   margin: 5%;
+  transition: background-color 0.2s;
 }
 
 main > article > a:active {
   transform: scale(0.98);
+}
+
+main > article > a:hover {
+  background-color: var(--black);
+  color: var(--white);
 }
 
 @keyframes resize {
@@ -195,7 +201,7 @@ main > article > a:active {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 5%;
+  margin: 2%;
 }
 
 #composers > article {
@@ -218,4 +224,19 @@ main > article > a:active {
   line-height: 0.6;
   /* from 1 */
   margin-right: 0.05em;
+}
+
+/* FOOTER===================================== */
+footer {
+  background-color: black;
+  display: grid;
+  justify-items: center;
+  color: white;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 2%;
+  font-size: 0.8rem;
+}
+
+footer article > h3 {
+  font-size: 1rem;
 }
