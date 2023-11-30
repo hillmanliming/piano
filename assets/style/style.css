@@ -144,8 +144,12 @@ main {
   align-items: center;
   height: 100vh;
   background-image: url(/assets/img/blurred-5.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-position: center;
-  object-fit: cover;
+  background-repeat: no-repeat;
 }
 
 main>article {
@@ -209,7 +213,6 @@ main>article>a:active {
 #composers>article:first-letter {
   font-size: 7rem;
   float: left;
-  line-height: .6;
-  /* from 1 */
+  line-height: .63;
   margin-right: 0.05em;
 }
