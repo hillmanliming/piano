@@ -147,7 +147,7 @@ main {
   height: 100vh;
   background-image: url(../../assets/img/blurred-5.png);
   background-position: center;
-  object-fit: cover;
+  background-repeat: no-repeat;
 }
 /* Centering of stuff and applying the pop up like box */
 main > article {
