@@ -10,25 +10,26 @@
   </head>
 
   <body>
+    <!-- Dynamic island menu, on hover hide the menu ICON  and smoothly becomes wider to show the menu content-ICONS.
+      When not hovering over the menu its opacity is lower, to seem less obstructive and deviate attention. When hovering it turns back to full opacity. -->
     <header class="container">
       <ul id="menu">
         <li class="out-menu">
-          <a href=""
-            ><svg
-              id="menu-svg"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M6 12c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3zm9 0c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3zm9 0c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z"
-              />
-            </svg>
-          </a>
+          <!-- svg image is a lighter gray to look 'inactive'. On hover it turns black to show that it's 'active'-->
+          <svg
+            id="menu-svg"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M6 12c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3zm9 0c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3zm9 0c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z"
+            />
+          </svg>
         </li>
-        <li class="in-menu home">
-          <a href="">
+        <li class="in-menu">
+          <a href="index.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -41,8 +42,8 @@
             </svg>
           </a>
         </li>
-        <li class="in-menu about">
-          <a href="">
+        <li class="in-menu">
+          <a href="recordings.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -50,13 +51,13 @@
               viewBox="0 0 24 24"
             >
               <path
-                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-.001 5.75c.69 0 1.251.56 1.251 1.25s-.561 1.25-1.251 1.25-1.249-.56-1.249-1.25.559-1.25 1.249-1.25zm2.001 12.25h-4v-1c.484-.179 1-.201 1-.735v-4.467c0-.534-.516-.618-1-.797v-1h3v6.265c0 .535.517.558 1 .735v.999z"
+                d="M23 0l-15.996 3.585v13.04c-2.979-.589-6.004 1.671-6.004 4.154 0 2.137 1.671 3.221 3.485 3.221 2.155 0 4.512-1.528 4.515-4.638v-10.9l12-2.459v8.624c-2.975-.587-6 1.664-6 4.141 0 2.143 1.715 3.232 3.521 3.232 2.14 0 4.476-1.526 4.479-4.636v-17.364z"
               />
             </svg>
           </a>
         </li>
-        <li class="in-menu contact">
-          <a href="">
+        <li class="in-menu">
+          <a href="contact.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -72,6 +73,7 @@
       </ul>
     </header>
     <main>
+      <!-- Splash screen pop up to very briefly show the HILLMAN piano background :).  -->
       <article>
         <div>
           <h1>LI-MING HILLMAN</h1>
@@ -80,11 +82,13 @@
         <a href="#composers">Learn more</a>
       </article>
     </main>
+    <!-- Wrong id name but have to change later. Just background info -->
     <section id="composers">
       <article>
         <h2>The Journey</h2>
+        <!-- Making use of what's called 'caps drop' where the first letter is considerably larger than the rest of text. -->
         <p>
-          At a fine age of six, Li-Ming started following lessons for the
+          At the fine age of six, Li-Ming started following lessons for the
           recorder to develop the usefull skill of reading notes. After about
           1.5 years he decided to switch to the piano. Following the example of
           his older sister Minke who'd been playing the piano for a couple years
@@ -102,6 +106,7 @@
         </p>
       </article>
     </section>
+    <!-- Basic footer with disclaimers and contact options. -->
     <footer>
       <article>
         <h3>Disclaimer</h3>

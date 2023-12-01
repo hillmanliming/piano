@@ -77,6 +77,7 @@ a {
 
 /* Menu expandable=========================== */
 
+/* Wanted to use this for a background but nothing looked good, so now this doesn't really have a purpose */
 header {
   position: fixed;
   width: 100%;
@@ -90,6 +91,7 @@ header {
   background-color: rgba(0, 0, 0, 0);
 }
 
+/* Cool menu imo, originally had the height change aswell, but then the spot where you hovered to open the menu, wasn't aligned with the menu buttons.*/
 #menu {
   border: 3px solid var(--black);
   display: flex;
@@ -143,11 +145,11 @@ main {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url(/assets/img/blurred-5.png);
+  background-image: url(../../assets/img/blurred-5.png);
   background-position: center;
   object-fit: cover;
 }
-
+/* Centering of stuff and applying the pop up like box */
 main > article {
   display: grid;
   place-items: center;
@@ -162,6 +164,7 @@ main > article {
   animation: resize 0.5s ease forwards 1;
 }
 
+/* Adds letterspacing to create a more spatious text */
 main > article > div > h1 {
   letter-spacing: 0.5em;
   text-align: center;
@@ -170,7 +173,7 @@ main > article > div > h1 {
 div {
   text-align: center;
 }
-
+/* 'Learn more' button, little effect when hovering and clicking on it */
 main > article > a {
   border: 3px solid var(--black);
   color: var(--black);
@@ -194,14 +197,15 @@ main > article > a:hover {
   }
 }
 
-/* second page=============================== */
+/* The journey (about me stuff) =============================== */
 
 #composers {
   display: grid;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 #composers > article {
@@ -209,6 +213,7 @@ main > article > a:hover {
   flex-direction: column;
   row-gap: 5rem;
 }
+/* Drop caps stuff */
 #composers > article > p {
   initial-letter: large;
 }
