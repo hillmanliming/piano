@@ -245,3 +245,16 @@ footer {
 footer article > h3 {
   font-size: 1rem;
 }
+
+/* Recordings ==================================================================== */
+
+/* TEMPORARY WAY OF SHOWING CONTENT!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.rec-container {
+  display: grid;
+  place-items: center;
+  padding: 5%;
+}
+video {
+  height: 40rem;
+}
