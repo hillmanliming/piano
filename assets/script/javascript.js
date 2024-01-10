@@ -8,23 +8,16 @@ window.addEventListener("resize", () => {
 });
 
 function sendMail(){
- (function(){
-  emailjs.init("QzVx1feoLPuZn9-QX?"); //account public key
- })();
+    let params = {
+      name : document.getElementById("name").value,
+      email : document.getElementById("email").value,
+      subject : document.getElementById("subject").value,
+      message : document.getElementById("message").value,
+    }
 
- var params = {
-  sendername: document.querySelector("#sendername").value,
-  subject: document.querySelector("#subject").value,
-  message: document.querySelector("#message").value
+    emailjs.send(
+      "service_i36re8v",
+      "template_o7u169n", params). then((alert("Email sent!"))
+    )
+  }
 
- };
-
- var serviceID = "service_i36re8v" //email service id
- var templateID = "template_o7u169n"  // email template id
-
- emailjs.send(serviceID, templateID, params)
- .then ( res =>{
-  alert("Email sent successfully!")
- })
- .catch()
-}

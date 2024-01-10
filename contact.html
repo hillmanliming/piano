@@ -7,6 +7,16 @@
     <script src="assets/script/javascript.js" defer></script>
     <link rel="icon" href="assets/img/Untitled-1.png" type="image/icon type" />
     <title>Li-Ming Hillman | Piano - Contact</title>
+    <!-- Send email stuff -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("QzVx1feoLPuZn9-QX");
+      })();
+    </script>
   </head>
 
   <body>
@@ -77,18 +87,18 @@
 
       <form action="">
         <label for="name">Name</label>
-        <input type="text" id="sendername" required="" />
+        <input type="text" id="name" required="" />
 
         <label for="name">Subject</label>
         <input type="text" id="subject" required="" />
 
         <label for="email">Email</label>
-        <input type="text" id="email" name="email" required="" />
+        <input type="email" id="email" required="" />
 
         <label for="message">Message</label>
-        <input type="text" id="message" name="message" required="" />
+        <input type="text" id="message" required="" />
 
-        <button type="submit" onclick="sendMail()">Send</button>
+        <button onclick="sendMail()">Send</button>
       </form>
     </main>
     <footer>
