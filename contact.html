@@ -86,19 +86,19 @@
       aspernatur optio!
 
       <form action="">
-        <label for="name">Name</label>
-        <input type="text" id="name" required="" />
+        <label for="name">Name &#40;2-10 char.&#41;</label>
+        <input type="text" minlength="2" maxlength="10" id="name" required="" />
 
         <label for="name">Subject</label>
         <input type="text" id="subject" required="" />
 
-        <label for="email">Email</label>
-        <input type="email" id="email" required="" />
+        <!-- <label for="email">*Email</label>
+        <input type="email" id="email" required="" /> -->
 
         <label for="message">Message</label>
         <input type="text" id="message" required="" />
 
-        <button onclick="sendMail()">Send</button>
+        <button id="send-button" onclick="sendMail()">Send</button>
       </form>
     </main>
     <footer>
