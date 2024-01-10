@@ -9,7 +9,7 @@ window.addEventListener("resize", () => {
 
 function sendMail(){
  (function(){
-  emailjs.init(QzVx1feoLPuZn9-QX); //account public key
+  emailjs.init("QzVx1feoLPuZn9-QX?"); //account public key
  })();
 
  var params = {
