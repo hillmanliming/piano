@@ -74,35 +74,21 @@
       temporibus optio eos earum maxime, quisquam repellat, nostrum aspernatur
       eligendi obcaecati. Fugit cum necessitatibus quos excepturi delectus culpa
       aspernatur optio!
+
       <form action="">
         <label for="name">Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="John Doe"
-          required=""
-        />
+        <input type="text" id="sendername" required="" />
+
+        <label for="name">Subject</label>
+        <input type="text" id="subject" required="" />
 
         <label for="email">Email</label>
-        <input
-          type="text"
-          id="email"
-          name="email"
-          placeholder="johndoe123@gmail.com"
-          required=""
-        />
+        <input type="text" id="email" name="email" required="" />
 
         <label for="message">Message</label>
-        <input
-          type="text"
-          id="message"
-          name="message"
-          placeholder="Your message"
-          required=""
-        />
+        <input type="text" id="message" name="message" required="" />
 
-        <button type="submit">Send</button>
+        <button type="submit" onclick="sendMail()">Send</button>
       </form>
     </main>
     <footer>
