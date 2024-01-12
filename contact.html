@@ -85,20 +85,26 @@
       eligendi obcaecati. Fugit cum necessitatibus quos excepturi delectus culpa
       aspernatur optio!
 
-      <form action="">
+      <form data-form>
         <label for="name">Name &#40;2-10 char.&#41;</label>
-        <input type="text" minlength="2" maxlength="10" id="name" required="" />
+        <input type="text" id="name" data-form-input="name" />
 
         <label for="name">Subject</label>
-        <input type="text" id="subject" required="" />
+        <input type="text" id="subject" data-form-input="subject" />
 
         <!-- <label for="email">*Email</label>
         <input type="email" id="email" required="" /> -->
 
         <label for="message">Message</label>
-        <input type="text" id="message" required="" />
-
-        <button id="send-button" onclick="sendMail()">Send</button>
+        <input type="text" id="message" data-form-input="message" />
+        <button
+          type="submit"
+          id="send-button"
+          data-form-submit
+          onclick="sendMail()"
+        >
+          Send
+        </button>
       </form>
     </main>
     <footer>
