@@ -80,23 +80,92 @@
       </ul>
     </header>
     <main class="contact-container">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius repellendus
-      temporibus optio eos earum maxime, quisquam repellat, nostrum aspernatur
-      eligendi obcaecati. Fugit cum necessitatibus quos excepturi delectus culpa
-      aspernatur optio!
+      If you have any feedback on my playing or website please let me know by
+      sending me a message. For a response please add your email in the message,
+      this is not required.
+      <br /><br />
+      Thank you
 
-      <form data-form>
-        <label for="name">Name &#40;2-10 char.&#41;</label>
-        <input type="text" id="name" data-form-input="name" />
+      <form id="form">
+        <article>
+          <label for="name"
+            ><span class="required">*</span>Name: &#40;2-10 char.&#41;</label
+          >
+          <input
+            required
+            title="Must be 2-10 characters"
+            pattern="[a-zA-Z\-]{2,10}"
+            minlength="2"
+            maxlength="10"
+            type="text"
+            id="name"
+            class="clear"
+          />
+        </article>
+        <article>
+          <label for="subject"
+            ><span class="required">*</span>Subject: &#40;2-10 char.&#41;</label
+          >
+          <input
+            required
+            title="Must be 2-10 characters"
+            pattern="[a-zA-Z\-]{2,10}"
+            minlength="2"
+            maxlength="10"
+            type="text"
+            id="subject"
+            class="clear"
+          />
+        </article>
+        <!-- <article>
+          <label for="email">Email: &#40;only required for response&#41;</label>
+          <input
+            title="Must be a valid email address"
+            pattern="[a-zA-Z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+            placeholder="john123@gmail.com"
+            type="email"
+            id="email"
+            class="clear"
+          />
+        </article> -->
+        <article>
+          <label for="message"
+            ><span class="required">*</span>Message: &#40;10-200
+            char.&#41;</label
+          >
+          <textarea
+            rows="5"
+            required
+            minlength="10"
+            maxlength="250"
+            type="text"
+            id="message"
+            class="clear"
+          ></textarea>
+        </article>
+        <button type="submit" class="start-listen">submit</button>
+      </form>
 
-        <label for="name">Subject</label>
-        <input type="text" id="subject" data-form-input="subject" />
+      <!-- <form data-form>
+        <label for="name">Name &#40;max 10 char.&#41;</label>
+        <input type="text" id="name" data-form-input="name" maxlength="10" />
 
-        <!-- <label for="email">*Email</label>
-        <input type="email" id="email" required="" /> -->
+        <label for="name">Subject &#40;max 15 char.&#41;</label>
+        <input
+          type="text"
+          id="subject"
+          data-form-input="subject"
+          maxlength="15"
+        />
 
-        <label for="message">Message</label>
-        <input type="text" id="message" data-form-input="message" />
+        <label for="message">Message &#40;max 250 char.&#41;</label>
+        <textarea
+          rows="5"
+          type="text"
+          id="message"
+          data-form-input="message"
+          maxlength="250"
+        ></textarea>
         <button
           type="submit"
           id="send-button"
@@ -105,7 +174,7 @@
         >
           Send
         </button>
-      </form>
+      </form> -->
     </main>
     <footer>
       <article>
