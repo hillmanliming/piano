@@ -272,13 +272,35 @@ footer article>h3 {
   font-size: var(--main-title);
 }
 
-.rec-main-container{
+.rec-wrapper{
   padding: 5% 2% 2% 2%;
   height: 100%;
-  display: grid;
-  grid-template-columns: (auto-fit, minmax(250px, 1fr));
-  row-gap: 1rem;
+  display: flex;
+  flex-direction: column;
+
 }
+.rec-main-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100%;
+ place-content: center;
+ column-gap: 5rem;
+
+}
+#video-section{
+  position: fixed;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+#video{
+  aspect-ratio: 16/9;
+  width: 600px;
+
+}
+
+/* grid-template-columns: (auto-fit, minmax(250px, 1fr));
+row-gap: 1rem; */
 
 #songs{
   display: flex;
@@ -291,6 +313,8 @@ footer article>h3 {
 .rec-main-container a:hover{
 text-decoration: underline;
 }
+
+
 
 /* Contact ============================================================================================= */
 
@@ -341,7 +365,7 @@ label{
   justify-content: space-between;
 }
 
-.contact-wrapper{
+.recordings-contact-wrapper{
   display: flex;
   flex-direction: column;
   padding: 5% 2% 2% 2%;
