@@ -22,6 +22,7 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
 
 img,
@@ -214,32 +215,34 @@ svg {
 
 /* The journey (about me stuff) =============================== */
 
-#composers {
+#intro {
   display: grid;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin-left: 2%;
-  margin-right: 2%;
+  min-height: 100vh;
+  margin: 2%;
 }
 
-#composers>article {
+#intro>article {
   display: flex;
   flex-direction: column;
   row-gap: 5rem;
 }
 
+.title{
+  font-size: var(--sub-title);
+}
 /* Drop caps stuff */
-#composers>article>p {
+#intro>article>p {
   initial-letter: large;
 }
 
-#composers>article {
+#intro>article {
   font-size: var(--par);
   max-width: 85ch;
 }
 
-#composers>article>p:first-letter {
+#intro>article>p:first-letter {
   font-size: 7rem;
   float: left;
   line-height: 0.6;
@@ -257,6 +260,7 @@ footer {
   padding: 2%;
   font-size: 0.8rem;
   margin-top: auto;
+  margin-bottom: 0;
 }
 
 footer article>h3 {
@@ -264,15 +268,24 @@ footer article>h3 {
 }
 
 /* Recordings ==================================================================== */
-
-/* TEMPORARY WAY OF SHOWING CONTENT!!!!!!!!!!!!!!!!!!!!!!!!! */
+.h1{
+  font-size: var(--main-title);
+}
 
 .rec-main-container{
-  padding: 5%;
+  padding: 5% 2% 2% 2%;
   height: 100%;
   display: grid;
   grid-template-columns: (auto-fit, minmax(250px, 1fr));
   row-gap: 1rem;
+}
+
+#songs{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  flex-wrap: wrap ;
+  font-size: var(--par);
 }
 
 .rec-main-container a:hover{
@@ -284,16 +297,20 @@ text-decoration: underline;
 .contact-container{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  place-content: center;
-  padding: 5%;
   column-gap: 4rem;
+  color:var(--black);
+  font-size: var(--par);
 }
 
 form{
   display: flex;
   flex-direction: column;
   gap: 1em;
+  justify-self: end;
+  width: 100%;
 }
+
+
 
 form>article{
   display: flex;
@@ -301,8 +318,9 @@ form>article{
 }
 
 input, textarea{
-  border: 2px solid black;
+  border: 3px solid var(--black);
   padding: 1%;
+  color: var(--black);
 }
 
 
@@ -316,4 +334,20 @@ textarea{
 
 .required{
   color: red;
+}
+
+label{
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-wrapper{
+  display: flex;
+  flex-direction: column;
+  padding: 5% 2% 2% 2%;
+  row-gap: 1rem;
+}
+
+.contact-container>p>a{
+  text-decoration: underline;
 }

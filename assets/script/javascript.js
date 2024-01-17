@@ -1,4 +1,3 @@
-
 let resizeTimer;
 window.addEventListener("resize", () => {
   document.body.classList.add("resize-animation-stopper");
@@ -8,17 +7,22 @@ window.addEventListener("resize", () => {
   }, 400);
 });
 
-// function sendMail(){
-//   let params = {
-//     name : document.getElementById("name").value,
-//     subject : document.getElementById("subject").value,
-//     message : document.getElementById("message").value,
-//     }
-//     emailjs.send(
-//       "service_i36re8v",
-//       "template_o7u169n", params). then((alert("Email sent!"))
-//     )
-// }
+
+let nameLength = document.getElementById("name")
+nameLength.addEventListener("keyup", () => {
+document.getElementById("name-length").innerHTML = nameLength.value.length
+})
+
+let subjectLength = document.getElementById("subject")
+subjectLength.addEventListener("keyup", () => {
+document.getElementById("subject-length").innerHTML = subjectLength.value.length
+})
+
+let messageLength = document.getElementById("message")
+messageLength.addEventListener("keyup", () => {
+document.getElementById("message-length").innerHTML = messageLength.value.length
+})
+
 
 let form = document.getElementById("form")
 form.addEventListener("submit", function (e){
@@ -31,12 +35,28 @@ form.addEventListener("submit", function (e){
     }
     emailjs.send(
       "service_i36re8v",
-      "template_o7u169n", params). then((alert("Email sent!"))
+      "template_o7u169n", params).then((alert("Email sent!"))
     )
-    let inputs = document.querySelectorAll(".clear")
-   inputs.forEach(input => { input.value = ''
-   });
+  let inputs = document.querySelectorAll(".clear")
+  inputs.forEach(input => { input.value = ''});
+  // let txt = document.querySelectorAll(".length")
+  // txt.innerHTML = "0"
+  document.getElementById("name-length").innerHTML = "0"
+  document.getElementById("subject-length").innerHTML = "0"
+  document.getElementById("message-length").innerHTML = "0"
+
+
 })
+
+
+
+
+
+
+
+
+
+
 // function handleForm (e){
 //   e.preventDefault()
 //   let params = {

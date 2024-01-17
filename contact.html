@@ -79,112 +79,123 @@
         </li>
       </ul>
     </header>
-    <main class="contact-container">
-      If you have any feedback on my playing or website please let me know by
-      sending me a message. For a response please add your email in the message,
-      this is not required.
-      <br /><br />
-      Thank you
 
-      <form id="form">
-        <article>
-          <label for="name"
-            ><span class="required">*</span>Name: &#40;2-10 char.&#41;</label
-          >
+    <main class="contact-wrapper">
+      <h1 class="title">Contact</h1>
+      <section class="contact-container">
+        <p>
+          Thank you for taking interest in my website. I'd really appreciate it
+          if you have any feedback on my playing or the website itself, you do
+          let know by sending me a message. For my social media link please take
+          a look at the bottom of the page or go to my Instagram directly,
+          <a target="”_blank”" href="https://www.instagram.com/li.minghillman/"
+            >here</a
+          >.
+        </p>
+        <form id="form">
+          <article>
+            <label for="name"
+              ><div>
+                <span class="required">*</span>Name: &#40;2-10 char.&#41;
+              </div>
+              <p id="name-length" class="length">0</p>
+            </label>
+
+            <input
+              required
+              title="Must be 2-10 characters"
+              pattern="[a-zA-Z\-]{2,10}"
+              minlength="2"
+              maxlength="10"
+              type="text"
+              id="name"
+              class="clear"
+            />
+          </article>
+          <article>
+            <label for="subject"
+              ><div>
+                <span class="required">*</span>Subject: &#40;2-10 char.&#41;
+              </div>
+              <p id="subject-length" class="length">0</p></label
+            >
+            <input
+              required
+              title="Must be 2-10 characters"
+              pattern="[a-zA-Z\-]{2,10}"
+              minlength="2"
+              maxlength="10"
+              type="text"
+              id="subject"
+              class="clear"
+            />
+          </article>
+          <!-- <article>
+            <label for="email">Email: &#40;only required for response&#41;</label>
+            <input
+              title="Must be a valid email address"
+              pattern="[a-zA-Z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+              placeholder="john123@gmail.com"
+              type="email"
+              id="email"
+              class="clear"
+            />
+          </article> -->
+          <article>
+            <label for="message"
+              ><div>
+                <span class="required">*</span>Message: &#40;10-200 char.&#41;
+              </div>
+              <p id="message-length" class="length">0</p></label
+            >
+            <textarea
+              rows="5"
+              required
+              minlength="10"
+              maxlength="250"
+              type="text"
+              id="message"
+              class="clear"
+            ></textarea>
+          </article>
+          <button type="submit" class="start-listen">submit</button>
+        </form>
+
+        <!-- <form data-form>
+          <label for="name">Name &#40;max 10 char.&#41;</label>
+          <input type="text" id="name" data-form-input="name" maxlength="10" />
+  
+          <label for="name">Subject &#40;max 15 char.&#41;</label>
           <input
-            required
-            title="Must be 2-10 characters"
-            pattern="[a-zA-Z\-]{2,10}"
-            minlength="2"
-            maxlength="10"
-            type="text"
-            id="name"
-            class="clear"
-          />
-        </article>
-        <article>
-          <label for="subject"
-            ><span class="required">*</span>Subject: &#40;2-10 char.&#41;</label
-          >
-          <input
-            required
-            title="Must be 2-10 characters"
-            pattern="[a-zA-Z\-]{2,10}"
-            minlength="2"
-            maxlength="10"
             type="text"
             id="subject"
-            class="clear"
+            data-form-input="subject"
+            maxlength="15"
           />
-        </article>
-        <!-- <article>
-          <label for="email">Email: &#40;only required for response&#41;</label>
-          <input
-            title="Must be a valid email address"
-            pattern="[a-zA-Z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
-            placeholder="john123@gmail.com"
-            type="email"
-            id="email"
-            class="clear"
-          />
-        </article> -->
-        <article>
-          <label for="message"
-            ><span class="required">*</span>Message: &#40;10-200
-            char.&#41;</label
-          >
+  
+          <label for="message">Message &#40;max 250 char.&#41;</label>
           <textarea
             rows="5"
-            required
-            minlength="10"
-            maxlength="250"
             type="text"
             id="message"
-            class="clear"
+            data-form-input="message"
+            maxlength="250"
           ></textarea>
-        </article>
-        <button type="submit" class="start-listen">submit</button>
-      </form>
-
-      <!-- <form data-form>
-        <label for="name">Name &#40;max 10 char.&#41;</label>
-        <input type="text" id="name" data-form-input="name" maxlength="10" />
-
-        <label for="name">Subject &#40;max 15 char.&#41;</label>
-        <input
-          type="text"
-          id="subject"
-          data-form-input="subject"
-          maxlength="15"
-        />
-
-        <label for="message">Message &#40;max 250 char.&#41;</label>
-        <textarea
-          rows="5"
-          type="text"
-          id="message"
-          data-form-input="message"
-          maxlength="250"
-        ></textarea>
-        <button
-          type="submit"
-          id="send-button"
-          data-form-submit
-          onclick="sendMail()"
-        >
-          Send
-        </button>
-      </form> -->
+          <button
+            type="submit"
+            id="send-button"
+            data-form-submit
+            onclick="sendMail()"
+          >
+            Send
+          </button>
+        </form> -->
+      </section>
     </main>
     <footer>
       <article>
-        <h3>Disclaimer</h3>
-        <p>
-          Everything on this website is created and owned by me. Posting any
-          content from this website on any platform as your own is not
-          tolerated. <br />
-          © 2023 Li-Ming Hillman
-        </p>
+        <h3>Copright</h3>
+        <p>© 2023 Li-Ming Hillman</p>
       </article>
       <article>
         <h3>Help</h3>
