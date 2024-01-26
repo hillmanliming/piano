@@ -4,19 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/style/style.css" />
-    <script src="assets/script/javascript.js" defer></script>
+
     <link rel="icon" href="assets/img/Untitled-1.png" type="image/icon type" />
     <title>Li-Ming Hillman | Piano - Contact</title>
     <!-- Send email stuff -->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("QzVx1feoLPuZn9-QX");
-      })();
-    </script>
   </head>
 
   <body>
@@ -160,36 +151,6 @@
           </article>
           <button type="submit" class="start-listen">submit</button>
         </form>
-
-        <!-- <form data-form>
-          <label for="name">Name &#40;max 10 char.&#41;</label>
-          <input type="text" id="name" data-form-input="name" maxlength="10" />
-  
-          <label for="name">Subject &#40;max 15 char.&#41;</label>
-          <input
-            type="text"
-            id="subject"
-            data-form-input="subject"
-            maxlength="15"
-          />
-  
-          <label for="message">Message &#40;max 250 char.&#41;</label>
-          <textarea
-            rows="5"
-            type="text"
-            id="message"
-            data-form-input="message"
-            maxlength="250"
-          ></textarea>
-          <button
-            type="submit"
-            id="send-button"
-            data-form-submit
-            onclick="sendMail()"
-          >
-            Send
-          </button>
-        </form> -->
       </section>
     </main>
     <footer>
@@ -218,4 +179,14 @@
       </article>
     </footer>
   </body>
+  <script src="assets/script/javascript.js"></script>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+  ></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("QzVx1feoLPuZn9-QX");
+    })();
+  </script>
 </html>

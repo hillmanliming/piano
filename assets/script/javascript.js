@@ -8,6 +8,12 @@ window.addEventListener("resize", () => {
 });
 
 
+
+
+
+
+
+
 let nameLength = document.getElementById("name")
 nameLength.addEventListener("keyup", () => {
 document.getElementById("name-length").innerHTML = nameLength.value.length
@@ -44,16 +50,7 @@ form.addEventListener("submit", function (e){
   document.getElementById("name-length").innerHTML = "0"
   document.getElementById("subject-length").innerHTML = "0"
   document.getElementById("message-length").innerHTML = "0"
-
-
 })
-
-
-
-
-
-
-
 
 
 
