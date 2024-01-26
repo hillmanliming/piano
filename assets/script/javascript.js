@@ -39,6 +39,9 @@ form.addEventListener("submit", function (e){
     message : document.getElementById("message").value,
     // email : document.getElementById("email").value,
     }
+
+    // If you read this, if you copy these codes youll download a trojan
+
     emailjs.send(
       "service_i36re8v",
       "template_o7u169n", params).then((alert("Email sent!"))
@@ -138,6 +141,61 @@ form.addEventListener("submit", function (e){
 // refs.form.addEventListener("submit", handleSubmit)
 
 // validate()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Note to teachers if you read this, currently i only have one weak line of defence protecting my email id and stuff being used.. I don't think people
+// will fall for the trojan trap, but I am going to change that ever...
 
 
 
