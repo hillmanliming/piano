@@ -55,11 +55,10 @@ select {
   --unfocus: #9b9b9b;
 
   --clr-1: #052b2f;
-  --clr-2 : #073438;
+  --clr-2: #073438;
   --clr-3: #0e4b50;
   --clr-4: #2d8f85;
   --clr-5: #637c54;
-
 
   /*===
   --white: 
@@ -124,7 +123,7 @@ header {
 #menu:hover {
   transition: 0.5s ease;
   width: clamp(200px, 10%, 400px);
-  opacity: 1;
+  opacity: 0.75;
 }
 
 #menu:hover .out-menu {
@@ -163,7 +162,7 @@ svg {
 }
 
 /* Centering of stuff and applying the pop up box */
-.index-main>article {
+.index-main > article {
   display: grid;
   place-items: center;
   text-align: center;
@@ -178,7 +177,7 @@ svg {
 }
 
 /* Adds letterspacing to create a more spatious text */
-.index-main>article>div>h1 {
+.index-main > article > div > h1 {
   letter-spacing: 0.5em;
   text-align: center;
 }
@@ -188,7 +187,7 @@ svg {
 }
 
 /* 'Learn more' button, little effect when hovering and clicking on it */
-.index-main>article>a {
+.index-main > article > a {
   border: 3px solid var(--black);
   color: var(--black);
   padding: 2%;
@@ -196,10 +195,8 @@ svg {
   transition: background-color 0.2s;
 }
 
-
-.index-main>article>a:hover, .start-listen:hover
-
- {
+.index-main > article > a:hover,
+.start-listen:hover {
   background-color: var(--black);
   color: var(--white);
 }
@@ -210,7 +207,7 @@ svg {
   }
 }
 
-.start-listen{
+.start-listen {
   align-self: end;
   border: 3px solid var(--black);
   background-color: var(--white);
@@ -230,26 +227,26 @@ svg {
   margin: 2%;
 }
 
-#intro>article {
+#intro > article {
   display: flex;
   flex-direction: column;
   row-gap: 5rem;
 }
 
-.title{
+.title {
   font-size: var(--sub-title);
 }
 /* Drop caps stuff */
-#intro>article>p {
+#intro > article > p {
   initial-letter: large;
 }
 
-#intro>article {
+#intro > article {
   font-size: var(--par);
   max-width: 85ch;
 }
 
-#intro>article>p:first-letter {
+#intro > article > p:first-letter {
   font-size: 7rem;
   float: left;
   line-height: 0.6;
@@ -270,19 +267,52 @@ footer {
   margin-bottom: 0;
 }
 
-footer article>h3 {
+footer article > h3 {
   font-size: 1rem;
 }
 
 /* Recordings ==================================================================== */
-.h1{
+.h1 {
   font-size: var(--main-title);
 }
 
+/* ===============new testing=============================== */
+.recordings-main {
+  height: 100%;
+  padding: 2%;
+}
+.composers-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  place-items: center;
+  gap: 1rem;
+  height: 100%;
+  margin-top: 5%;
+}
+
+/* ====== */
+
+.bach {
+  position: absolute;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  color: red;
+  font-size: 2em;
+}
+
+.bach-img {
+  height: 100%;
+  width: auto;
+}
+
+.relative {
+  position: relative;
+}
 /* ========================================= */
 
-.foo-main{
- padding: 2%;
+.foo-main {
+  padding: 2%;
 }
 .main-carousel {
   display: flex;
@@ -329,7 +359,7 @@ footer article>h3 {
   padding: 5% 12% 8%;
   text-align: center;
   transform: translateX(-100%);
-  transition: transform .5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .carousel_slide.is-selected {
@@ -351,7 +381,7 @@ footer article>h3 {
   object-fit: cover;
   object-position: center;
   border: none;
-  filter: brightness(40%)
+  filter: brightness(40%);
 }
 
 .carousel_title {
@@ -359,20 +389,20 @@ footer article>h3 {
   color: var(--white);
 }
 
-.recordings-grid{
+.recordings-grid {
   display: grid;
   color: var(--white);
   font-size: var(--par);
 }
 
-.recordings-grid>p{
+.recordings-grid > p {
   font-size: var(--par);
   display: flex;
   flex-direction: column;
   margin-top: 2%;
 }
 
-.recordings-grid>p>a:hover{
+.recordings-grid > p > a:hover {
   text-decoration: underline;
 }
 
@@ -405,11 +435,11 @@ footer article>h3 {
 .carousel_btn svg {
   fill: var(--unfocus);
   transform-origin: center;
-  transition: fill .2s;
+  transition: fill 0.2s;
 }
 
 .carousel_btn:hover svg {
-  fill: var(--black)
+  fill: var(--black);
 }
 
 .jsPrev {
@@ -440,7 +470,7 @@ footer article>h3 {
   height: 20px;
   border-radius: 50%;
   background-color: var(--color-default-state);
-  transition: background-color .2s;
+  transition: background-color 0.2s;
 }
 
 .carousel_dot + .carousel_dot {
@@ -451,19 +481,17 @@ footer article>h3 {
   background-color: var(--color-active-state);
 }
 
-
-
 /* Contact ============================================================================================= */
 
-.contact-container{
+.contact-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 4rem;
-  color:var(--black);
+  color: var(--black);
   font-size: var(--par);
 }
 
-form{
+form {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -471,44 +499,43 @@ form{
   width: 100%;
 }
 
-
-
-form>article{
+form > article {
   display: flex;
   flex-direction: column;
 }
 
-input, textarea{
+input,
+textarea {
   border: 3px solid var(--black);
   padding: 1%;
   color: var(--black);
 }
 
-
-input:focus, textarea:focus{
- outline: none
+input:focus,
+textarea:focus {
+  outline: none;
 }
 
-textarea{
+textarea {
   resize: none;
 }
 
-.required{
+.required {
   color: red;
 }
 
-label{
+label {
   display: flex;
   justify-content: space-between;
 }
 
-.recordings-contact-wrapper{
+.recordings-contact-wrapper {
   display: flex;
   flex-direction: column;
   padding: 5% 2% 2% 2%;
   row-gap: 1rem;
 }
 
-.contact-container>p>a{
+.contact-container > p > a {
   text-decoration: underline;
 }
