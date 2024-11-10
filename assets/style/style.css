@@ -292,22 +292,8 @@ footer article > h3 {
 
 /* ====== */
 
-.bach {
-  position: absolute;
-  display: flex;
-  align-items: end;
-  justify-content: center;
-  color: red;
-  font-size: 2em;
-}
-
-.bach-img {
-  height: 100%;
-  width: auto;
-}
-
-.relative {
-  position: relative;
+.composer-img {
+  box-shadow: 5px 6px 5px rgb(186, 186, 186);
 }
 /* ========================================= */
 
